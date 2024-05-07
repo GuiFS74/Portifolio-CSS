@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro</title>
+<style>
+
+.caixa{
+	max-width: 470px;
+	margin: auto;    	/*Centraliza*/
+	padding: 25px;
+	box-shadow: 0 0 2px 2px #a8afcf;	/*Cria o degradê da caixa do formulário*/
+	background-color: #a8afcf;
+}
+
+.conclusao{
+	margin-top: 30px;
+	margin-bottom: 100px;
+	max-width: 800px;
+}
+
+body{
+	font-family: 'Trebuchet MS';
+	background-color:#252d50;
+}
+
+h1{
+	text-align: center;
+	text-decoration: underline;
+	color: #d8d9dd;
+	font-size: 45px;
+	text-transform: uppercase;
+}
+
+h2{
+	text-align: center;
+	text-decoration: underline;
+	color: #252d50;
+	font-size: 30px;
+	text-transform: uppercase;
+	line-height: 0.1;
+}
+
+input:not([name="genero"]){ 	/*Aplicar as propriedades para os inputs que não tem o nome género*/
+	margin-bottom: 20px;
+	background-color:#d8d9dd;
+	width: calc(100% - 15px);   	/*Calculo, 100% dos espaço disponível - 15 pixels, para não colar na caixa do formulário*/
+	border-radius: 5px;   	/*Pontas arredondadas*/
+	border: 5px solid #d8d9dd;  	/*Tamanho e cor da borda*/
+	font-size: 15px;
+	color: #252d50;
+	font-weight: bold;
+	font-family: 'Trebuchet MS';
+}
+
+input[type="radio"]{
+	margin-left: 40px;
+	margin-right: 0px;
+}
+
+input[id="genero-outro"]{
+	margin-bottom: 25px;
+}
+
+button{
+	display: block; 	/*Transformar o botão em um bloco*/
+	margin: auto;  	/*Centralizar o bloco*/
+	color: #d8d9dd;
+	font-weight: bold;
+	font-size: 25px;
+	font-family: 'Trebuchet MS';
+	width: calc(100% - 100px);
+	height: 40px;
+	margin-top: 25px;
+	background-color:#4b9b44;
+	border: 5px solid #4b9b44;
+	border-radius: 5px;
+}
+
+button:hover {
+	background-color: #356921;
+	border: 5px solid #356921;
+}
+
+button:active{
+	background-color: #275f10;
+	border: 5px solid #4b9b44;
+}
+
+label[for="texto-conlusao"]{
+	display: block;
+	text-align: justify;
+	text-indent: 30px;		/*Parágrafo*/
+	padding-top: 20px;
+	line-height: 1.5;		/*Entre linhas*/
+}
+
+label:not([for="genero-masculino"], 	/*Afastar os textos que não sejam dos gêneros da borda*/
+[for="genero-feminino"],
+[for="genero-outro"]){
+	padding-left: 5px;
+}
+
+label{  	/*Cores para os textos*/
+	color: #252d50;
+	font-size: 20px;
+}
+
+</style>
+
+</head>
+<body>
+<h1>Cadastro de Usuário</h1>
+<form action="#" method="post" class="caixa">
+<label for="nome">Nome:</label>
+<input type="text" id="nome" name="nome" required>
+<br>
+<label for="email">E-mail:</label>
+<input type="email" id="email" name="email" required>
+<br>
+<label for="senha">Senha:</label>
+<input type="password" id="senha" name="senha" required>
+<br>
+<label for="confirmar-senha">Confirmar Senha:</label>
+<input type="password" id="confirmar-senha" name="confirmar-senha" required>
+<br>
+<label>Gênero:</label><br>
+<input type="radio" id="genero-masculino" name="genero" value="Masculino">
+<label for="genero-masculino">Masculino</label>
+<input type="radio" id="genero-feminino" name="genero" value="Feminino">
+<label for="genero-feminino">Feminino</label>
+<input type="radio" id="genero-outro" name="genero" value="Outro">
+<label for="genero-outro">Outro</label>
+<br>
+<label for="data-nascimento">Data de Nascimento:</label>
+<input type="date" id="data-nascimento" name="data-nascimento" required>
+<br>
+<label for="cidade">Cidade:</label>
+<input type="text" id="cidade" name="cidade">
+<br>
+<label for="pais">País:</label>
+<input type="text" id="pais" name="pais">
+<br>
+<button type="submit">Cadastrar</button><br>
+</form>
+
+<div class="caixa conclusao">
+<h2>CONCLUSÃO</h2>
+<label for="texto-conlusao">O principal ponto a ser analisado deve sempre ser quem será o usuário final da aplicação. Tentei levar em 
+conta que o site pode ser usado por uma grande variedade de pessoas. Sendo assim, o maior desafio foi tentar 
+chegar a um design que fosse esteticamente decente e de fácil leitura, proporcionando uma boa experiência para 
+o usuário que precisar utilizar o formulário. Deixei as cores e organização dos elementos da forma que achei 
+visualmente mais interessante.<br></label>
+
+<label for="texto-conlusao">Procurei deixar os campos diferentes separados para evitar colocar informações erradas e criar uma caixa ao 
+redor do formulário para manter o foco no centro da tela.Textos maiores para ficar mais legíveis em diversas telas.</label>
+
+</div>
+</body>
+</html>
